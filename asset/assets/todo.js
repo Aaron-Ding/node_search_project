@@ -1,8 +1,9 @@
 
 $(document).ready(function(){
     $("#nihahama").on("submit",function(){
-        var item = $("form input");
-        var todo = {item: item.val()};
+        var item = $("#item");
+        var name = $("#name")
+        var todo = {item: item.val(),name: name.val()};
         $.ajax({
             type: 'POST',
             url:'/todo',
